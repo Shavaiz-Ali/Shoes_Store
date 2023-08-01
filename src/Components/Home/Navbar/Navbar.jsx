@@ -5,12 +5,14 @@ import {FaBarsStaggered} from "react-icons/fa6";
 import {AiOutlineShoppingCart} from "react-icons/ai";
 import {AiOutlineSearch} from "react-icons/ai";
 import {MdClose} from "react-icons/md"
-import DropDown from "./DropDown";
+import {Link} from "react-router-dom"
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const products = useSelector((state) => state.users.products);
     const [showMenu, setshowMenu] = useState(true);
     const [mobileNav, setMobilenav] = useState(false);
     const [searchBox, setSearchBox] = useState(true);
-    const [dropdown, setDropdown] = useState(false);
+    // const [dropdown, setDropdown] = useState(false);
     useEffect(() =>{
         let responsiveNavbar = () =>{
             if(window.innerWidth <= 980){
@@ -35,11 +37,11 @@ const Navbar = () => {
                     {
                         NavbarPc.map((item, index) =>{
                             return(
-                                <li key={index} className="text-[16px] text-black font-bold uppercase hover:bg-green-400 hover:text-white hover:px-8 hover:py-1 transition-all duration-500 ease-in-out rounded-[50px] cursor-pointer" onMouseEnter={() => setDropdown(!dropdown)} onMouseLeave={() => setDropdown(!dropdown)}>{item.name}
+                                <Link to={item.Link} key={index} className="text-[16px] text-black font-bold uppercase hover:bg-green-400 hover:text-white hover:px-8 hover:py-1 transition-all duration-500 ease-in-out rounded-[50px] cursor-pointer">{item.name}
                                      {/* {dropdown && (
                                         <DropDown />
                                      )} */}
-                                </li>
+                                </Link>
                             )
                         })
                     }
@@ -56,9 +58,12 @@ const Navbar = () => {
                 </div>
 
                }
-                <div className="bg-black sm:h-[50px] h-[40px] sm:w-[50px] w-[40px] text-white rounded-full flex justify-center items-center cursor-pointer">           
-                    <AiOutlineShoppingCart  className="text-[24px] font-semibold cursor-pointer"/>
-                </div>
+                <Link to={"/cart"}>
+                    <div className="relative bg-black sm:h-[50px] h-[40px] sm:w-[50px] w-[40px] text-white rounded-full flex justify-center items-center cursor-pointer">           
+                        <AiOutlineShoppingCart  className="text-[24px] font-semibold cursor-pointer"/>
+                        <div className="num bg-green-500 sm:h-5 sm:w-5 h-4 w-4 rounded-full text-center text-white sm:text-[14px] text-[12px] absolute top-[0px] right-[-5px] flex justify-center items-center border border-white">{products.length > 0 ? products.length : 0}</div>
+                    </div>
+                </Link>
                 <span className="bg-green-400 sm:h-[50px] h-[40px] sm:w-[50px] w-[40px] text-white rounded-full flex justify-center items-center cursor-pointer lg:hidden  transition-all duration-500 ease-in-out" onClick={() => setMobilenav(true)}>
                     <FaBarsStaggered className="text-[24px] font-semibold cursor-pointer"/>
                 </span>

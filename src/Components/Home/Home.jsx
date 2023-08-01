@@ -1,14 +1,14 @@
-import ProductNavigation from "./Products/ProductNavigation"
+import BannerImages from "./Bannner/BannerImages"
+import Products from "./Products/Products"
 import Slider from "./Slider/Slider"
-import TextSlider from "./Slider/TextSlider"
 
 
 const Home = () => {
   return (
     <div>
-      <TextSlider />
       <Slider />
-      <ProductNavigation />
+      <Products />
+      <BannerImages />
     </div>
   )
 }

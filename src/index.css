@@ -7,6 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    scroll-behavior: smooth;
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    background: white;
 }

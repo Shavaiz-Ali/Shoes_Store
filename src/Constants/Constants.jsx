@@ -132,3 +132,31 @@ export const SideData = [
         image: "https://nouthemes.net/html/trueshoes/images/shoe-detail/1.jpg"
     },
 ]
+
+
+export const BlogPostData = [
+    {
+        id:1,
+        image: "https://nouthemes.net/html/trueshoes/images/blog/1.jpg",
+        title: "AN INSIDE LOOK AT THE BREAKING2 KIT",
+        date: "Aug 2, 2023",
+        description: `Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further…`,
+        button: "Read More"
+    },
+    {
+        id:2,
+        image: "https://nouthemes.net/html/trueshoes/images/blog/2.jpg",
+        title: "UNPACKING THE BREAKING2 RACE STRATEGY",
+        date: "Aug 2, 2023",
+        description: `Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further…`,
+        button: "Read More"
+    },
+    {
+        id:3,
+        image: "https://nouthemes.net/html/trueshoes/images/blog/3.jpg",
+        title: "NIKE’S LATEST FOOTBALL CLEAT BREAKS THE MOLD",
+        date: "Aug 2, 2023",
+        description: `Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further…`,
+        button: "Read More"
+    },
+]

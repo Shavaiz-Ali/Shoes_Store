@@ -27,7 +27,7 @@ const Cart = () => {
     }
   }, [totalAmt]);
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto overflow-hidden">
       { products.length > 0 ? (
         <div>
           <div className="grid grid-cols-12 place-items-center  bg-black/[0.15] my-5 py-5 rounded">
@@ -62,21 +62,26 @@ const Cart = () => {
           </div>
 
           <div className="flex flex-col justify-items-end items-end my-[20px]">
-            <h1 className="text-[18px] font-[600]">Update Cart</h1>
-            <div className="flex flex-col border justify-between border-black/[0.15] w-[350px]">
-                <h1 className="flex justify-between">SubTotal
-                  <span>67</span>
-                </h1>
-                <h1 className="flex justify-between border-t border-black/[0.15]">SubTotal
-                  <span>67</span>
-                </h1>
-                <h1 className="flex justify-between">SubTotal
-                  <span>67</span>
-                </h1>
+            <h1 className="text-[24px] font-[600]">Cart Total</h1>
+              <div className="flex flex-col border justify-between border-black/[0.15] w-[350px] mt-4">
+                  <h1 className="flex justify-between text-xl font-[600] py-2 px-3">SubTotal
+                    <span>{totalAmt}</span>
+                  </h1>
+                  <h1 className="flex justify-between border-t border-black/[0.15] text-xl font-[600] py-2 px-3">Shipping Charges
+                    <span>{shippingCharge}</span>
+                  </h1>
+                  <h1 className="flex justify-between border-t border-black/[0.15] text-xl font-[600] py-2 px-3">Total
+                    <span>{totalAmt + shippingCharge}</span>
+                  </h1>
               </div>
+            <button className="w-[250px] h-[40px] text-white bg-black border-0 outline-none mt-4">Proceed to Checkout</button>
           </div>
         </div>
-      ) : <h1>Cart Is Empty</h1>
+      ) : (
+        <div className="text-[3rem] text-black font-[700] uppercase flex justify-center items-center transtion-all duration-700 ease-in-out scale-110 h-[50vh]">
+         <h1> Cart is Empty</h1>
+        </div>
+      )
       }
     </div>
   )

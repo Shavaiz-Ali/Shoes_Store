@@ -31,7 +31,7 @@ const ProductNavigation = () => {
     ]
   return (
     <div className="container mx-auto md:w-[85%] w-[95%] flex lg:flex-row flex-col xl:flex-nowrap flex-wrap xl:justify-between justify-center mt-[4rem]">
-      <ProductTitle />
+      <ProductTitle title={"Features"} subTitle={"Features Products"} className="mx-auto"/>
       <ul className="flex lg:flex-nowrap flex-wrap lg:justify-center lg:items-end justify-start sm:gap-12 gap-4 sm:mt-0 mt-3 mx-auto">
         {
             navItems.map((item) =>{

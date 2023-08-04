@@ -12,7 +12,7 @@ const ProductDetails = () => {
         }
       }, [location.state?.item]);
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto' data-aos="zoom-in">
         {/* product images  */}
         <div className=" flex md:flex-row flex-col justify-center my-[4rem] gap-10">
           <div className="flex lg:flex-row flex-col justify-center gap-5 ">

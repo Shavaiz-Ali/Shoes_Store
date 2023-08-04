@@ -28,7 +28,7 @@ const Cart = () => {
     }
   }, [totalAmt]);
   return (
-    <div className="container mx-auto overflow-hidden">
+    <div className="container mx-auto overflow-hidden" data-aos="zoom-in">
       { products.length > 0 ? (
         <div>
           <div className="md:grid lg:grid-cols-12 grid-cols-12 place-items-center  bg-black/[0.15] my-5 py-5 rounded hidden ">

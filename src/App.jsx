@@ -9,8 +9,13 @@ import ProductDetails from "./Components/Pages/productDetails/ProductDetails"
 import Cart from "./Components/Pages/Cart/Cart"
 import Footer from "./Components/Home/Footer/Footer"
 import Shop from "./Components/Pages/Shop/Shop"
+// import 'aos/dist/aos.css'; // Import AOS styles
+// import AOS from 'aos'; // Import AOS library
+// import { useEffect } from "react"
 function App() {
-
+// useEffect(() => {
+//  AOS.init(); // Initialize AOS
+// })
   return (
     <>
       <Router> 

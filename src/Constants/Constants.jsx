@@ -42,68 +42,100 @@ export const NavbarPc = [
 
 export const ProductData = [
     {
+
         id:6001,
         image: "http://nouthemes.net/html/trueshoes/images/shoe/1.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
         price: 220,
-        quantity: 1
+        quantity: 1,
+        category: "Cricket",
+        color: "black",
+        brand: "Nike"
     },
     {
+
         id:6002,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/2.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
         price: 220,
-        quantity: 1
+        quantity: 1,
+        category: "Running",
+        color: "black",
+        brand: "Nike"
     },
     {
+
         id:6003,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/3.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
         price: 220,
-        quantity: 1
+        quantity: 1,
+        category: "Baseball",
+        color: "black",
+        brand: "Adidas"
     },
     {
+
         id:6004,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/4.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
         price: 220,
-        quantity: 1
+        quantity: 1,
+        category: "Football",
+        color: "black",
+        brand: "Adidas"
     },
     {
+
         id:6005,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/5.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
         price: 220,
-        quantity: 1
+        quantity: 1,
+        category: "Training and Game ",
+        color: "black",
+        brand: "Jordan"
     },
     {
+
         id:6006,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/6.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
         price: 220,
-        quantity: 1
+        quantity: 1,
+        category: "Cricket",
+        color: "black",
+        brand: "Gucci"
     },
     {
+
         id:6007,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/7.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
         price: 220,
-        quantity: 1
+        quantity: 1,
+        category: "Nike",
+        color: "black",
+        brand:"B&G"
     },
     {
+
         id:6008,
         image: "http://nouthemes.net/html/trueshoes/images/shoe/8.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
         price: 220,
-        quantity: 1
+        quantity: 1,
+        category: "Nike",
+        color: "black",
+        brand: "Jordan"
     },
 ]
 
@@ -260,12 +292,12 @@ export const Accountdetail = [
 // sidebar Data 
 
 export const Category = [
-    {id: 5001, name: "Life (40)",},
-    {id: 5002, name: "Running (5)",},
-    {id: 5003, name: "Baseball (0)",},
-    {id: 5004, name: "Football (5)",},
-    {id: 5005, name: "Training and Game (5)",},
-    {id: 5006, name: "Cricket (5)",},
+    {id: 5001, name: "Life",},
+    {id: 5002, name: "Running",},
+    {id: 5003, name: "Baseball",},
+    {id: 5004, name: "Football",},
+    {id: 5005, name: "Training and Game",},
+    {id: 5006, name: "Cricket",},
 ]
 
 // Sidebar Brands Data
@@ -285,7 +317,7 @@ export const ColorsData = [
     { id: 7004, name: "red" },
     { id: 7005, name: "blue" },
     { id: 7006, name: "darkblue" },
-    { id: 7006, name: "slate" },
+    { id: 7007, name: "slate" },
     { id: 7008, name: "blue" },
     { id: 7009, name: "orange" },
     { id: 7010, name: "pink" },

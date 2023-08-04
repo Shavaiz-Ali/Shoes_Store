@@ -80,8 +80,8 @@ const Navbar = () => {
                                         {
                                             NavbarPc.map((item, index) =>{
                                                 return(
-                                                    <li key={index} className="font-semibold items-center text-lg text-black cursor-pointer" onClick={() => setMobilenav(false)}>{item.name}
-                                                    </li>
+                                                    <Link to={item.Link} key={index} className="font-semibold items-center text-lg text-black cursor-pointer" onClick={() => setMobilenav(false)}>{item.name}
+                                                    </Link>
                                                 )
                                             })
                                         }

@@ -18,6 +18,8 @@ const Contact = () => {
     <div
       className="container my-16 sm:mx-[30px] sm:w-[400px] w-auto flex flex-col justify-center items-center"
       onSubmit={(e) => HandleSubmit(e)}
+      data-aos="fade-down"
+     data-aos-anchor-placement="top-center"
     >
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-[30px] font-[600]">Contact Us</h1>

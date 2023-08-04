@@ -35,7 +35,8 @@ const BestSales = () => {
   };
 
   return (
-    <div className="container mx-auto md:w-[85%] w-[95%]">
+    <div className="container mx-auto md:w-[85%] w-[95%]" data-aos="fade-right"
+    data-aos-offset="300" data-aos-easing="ease-in-sine">
       <div className="flex lg:flex-row flex-col sm:justify-between justify-center items-center">
         <ProductTitle title={"Best Sales"} subTitle={"Top Sales"} className="mx-auto"/>
         <div className="flex justify-start items-end gap-4">

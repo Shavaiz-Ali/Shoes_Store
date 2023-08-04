@@ -10,7 +10,7 @@ import Testtimonials from "./Testimonials/Testtimonials"
 
 const Home = () => {
   return (
-    <div>
+    <div data-aos="zoom-in">
       <Slider />
       <Products />
       <BannerImages />

@@ -10,7 +10,7 @@ import FooterBottom from "./FooterBottom";
 const Footer = () => {
  
   return (
-    <div className="w-full p-0 mt-16">
+    <div className="w-full p-0 mt-16" >
       <FooterHeader />
       <div className="bg-no-repeat bg-right bg-cover " style={{backgroundImage: "url('https://nouthemes.net/html/trueshoes/images/background/parallax.jpg')"}}>
         <div className="bg-black/[0.80] ">

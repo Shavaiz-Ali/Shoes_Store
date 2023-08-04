@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 const Testtimonials = () => {
   return (
-    <div className=' p-5 m-0 w-full my-16 bg-[url("https://nouthemes.net/html/trueshoes/images/background/parallax.jpg")] bg-no-repeat bg-center bg-cover bg-fixed'>
+    <div className=' p-5 m-0 w-full my-16 bg-[url("https://nouthemes.net/html/trueshoes/images/background/parallax.jpg")] bg-no-repeat bg-center bg-cover bg-fixed' data-aos="fade-left">
       <Swiper
         // install Swiper modules
         modules={[EffectFade, Pagination, Autoplay, A11y]}

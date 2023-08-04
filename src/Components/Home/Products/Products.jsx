@@ -18,10 +18,11 @@ const Products = () =>{
                     <div className='grid lg:grid-cols-4 sm:grid-cols-2 gap-6 my-5'>
                       {
                           ProductData.map((item) => {
+                            console.log(item.id , "hjgdfdahfhchdgfdhf")
                             return(
                               <>
                                 <div key={item.id} className='relative'>
-                                  <Link to={"/product"} onClick={() => handleproductdetails(item)}>
+                                  <Link to={`/product`} onClick={() => handleproductdetails(item)}>
                                   <img src={item.image} alt="" className='hover:scale-[1.03] transition-all ease-in duration-300'/>
                                   </Link>
                                   <div className="flex justify-between items-center z-50">

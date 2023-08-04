@@ -55,17 +55,7 @@ const ProductDetailsRight = () => {
       <div className="flex items-baseline justify-center gap-3">
         <div className="button">
         <button className='flex justify-center gap-5 items-center sm:text-[18px] text-[16px] text-white bg-[#2AC37D] py-4 px-6 rounded-[50px] sm:w-[230px] w-[180px] mt-5 shadow-black/[0.15] shadow-lg font-semibold hover:bg-[#30d68b] transition-all duration-300 ease-out' onClick={() => dispatch(
-          addToCart(
-            {
-              _id: productInfo.id,
-              name:productInfo.name,
-              price:productInfo.price,
-              image_url : productInfo.image,
-              quantity:productInfo.quantity, //this will be updated when user adds item in the cart
-              size: "",// this is selected by user from dropdown menu
-              // color:productInfo.color
-            }
-          )
+          addToCart(productInfo )
         )}>Add to cart <FaAngleRight className="text-xl text-white"
         /> </button>
         </div>

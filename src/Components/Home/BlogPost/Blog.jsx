@@ -5,7 +5,7 @@ import ProductTitle from "../Products/ProductTitle"
 const Blog = () => {
   return (
     <div className="container mx-auto md:w-[85%] w-[95%] my-16">
-      <div className="flex justify-between justify-center items-center my-3">
+      <div className="flex justify-between items-center my-3">
          <ProductTitle title={"News"} subTitle={"Our Story"} className={"mx-0"}/>
             <li className="sm:text-[16px] text-[13px] uppercase font-[700] text-[#8d8d8d] hover:text-green-600     active:text-green-600 cursor-pointer list-none">View all Post</li>
       </div>

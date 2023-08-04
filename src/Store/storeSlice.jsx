@@ -16,18 +16,19 @@ const storeSlice = createSlice({
     reducers :{
         addToCart(state, action){
             const item = state.products.find(
-                (item) => item._id === action.payload._id
+                (item) => item.id === action.payload.id
               );
               if (item) {
                 item.quantity += action.payload.quantity;
               } else {
                 state.products.push(action.payload);
               }
+              console.log(action.payload)
               saveCartToLocalStorage(state.products);
         },
         increaaseQuantity(state, action){
             const item = state.products.find(
-                (item) => item._id === action.payload._id
+                (item) => item.id === action.payload.id
               );
               if (item) {
                 item.quantity++;
@@ -35,7 +36,7 @@ const storeSlice = createSlice({
         },
         decreseQuantity(state, action){
             const item = state.products.find(
-                (item) => item._id === action.payload._id
+                (item) => item.id === action.payload.id
               );
               if (item.quantity === 1) {
                 item.quantity = 1;
@@ -45,7 +46,11 @@ const storeSlice = createSlice({
         },
         deleteItem(state, action){
             console.log("Delete item reducer is called");
-             state.products = state.products.filter((item) => item._id !== action.payload);
+             state.products = state.products.filter((item) => {
+              item.id !== action.payload
+              console.log(item.id + "jkhdfkjdayfki")
+              console.log(action.payload)
+            });
           },
         Reset(state){
             state.products = [];

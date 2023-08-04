@@ -7,8 +7,8 @@ export const NavbarPc = [
         activeTab: "Home",
     },
     {
-        name: "Men",
-        Link: "/",
+        name: "Shop",
+        Link: "/shop",
         activeTab: "",
 
         hoverDropdown:[
@@ -24,12 +24,7 @@ export const NavbarPc = [
         ]
     },
     {
-        name: "Women",
-        Link: "/",
-        activeTab: ""
-    },
-    {
-        name: "Kids",
+        name: "New Arrivals",
         Link: "/",
         activeTab: ""
     },
@@ -47,7 +42,7 @@ export const NavbarPc = [
 
 export const ProductData = [
     {
-        id:1,
+        id:6001,
         image: "http://nouthemes.net/html/trueshoes/images/shoe/1.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
@@ -55,7 +50,7 @@ export const ProductData = [
         quantity: 1
     },
     {
-        id:2,
+        id:6002,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/2.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
@@ -63,7 +58,7 @@ export const ProductData = [
         quantity: 1
     },
     {
-        id:3,
+        id:6003,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/3.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
@@ -71,7 +66,7 @@ export const ProductData = [
         quantity: 1
     },
     {
-        id:4,
+        id:6004,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/4.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
@@ -79,7 +74,7 @@ export const ProductData = [
         quantity: 1
     },
     {
-        id:5,
+        id:6005,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/5.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
@@ -87,7 +82,7 @@ export const ProductData = [
         quantity: 1
     },
     {
-        id:6,
+        id:6006,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/6.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
@@ -95,7 +90,7 @@ export const ProductData = [
         quantity: 1
     },
     {
-        id:7,
+        id:6007,
         image: "https://nouthemes.net/html/trueshoes/images/shoe/7.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
@@ -103,7 +98,7 @@ export const ProductData = [
         quantity: 1
     },
     {
-        id:8,
+        id:6008,
         image: "http://nouthemes.net/html/trueshoes/images/shoe/8.jpg",
         name: "Air Jordan 7 retro",
         subTitle: "Men shoes, Nike, Jordan",
@@ -159,4 +154,141 @@ export const BlogPostData = [
         description: `Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further…`,
         button: "Read More"
     },
+]
+
+// footer data 
+export const Shop = [
+    {
+        id:1001,
+        title:"Shop"
+    },
+    {
+      id: 10001,
+      name:"Shoes",
+      Link: "/"
+    },
+    {
+      id: 10002,
+      name:"Clothing",
+      Link: "/"
+    },
+    {
+      id: 10003,
+      name:"Accessries",
+      Link: "/"
+    },
+    {
+      id: 10004,
+      name:"Sports Shoes",
+      Link: "/"
+    },
+    {
+      id: 10005,
+      name:"New Arrivals",
+      Link: "/"
+    },
+  ]
+
+//   footer data 
+  export const GetHelp = [
+    {
+        id:1001,
+        title:"Get Help"
+    },
+    {
+        id:2001,
+        name:"Order Status",
+        link: "/"
+    },
+    {
+        id:2002,
+        name:"Shipping And Delivery",
+        link: "/"
+    },
+    {
+        id:2003,
+        name:"Returns",
+        link: "/"
+    },
+    {
+        id:2004,
+        name:"Privacy Policies",
+        link: "/"
+    },
+    {
+        id:2005,
+        name:"Contact Us",
+        link: "/"
+    },
+  ]
+
+//   footer data 
+
+export const Accountdetail = [
+    {
+        id:1001,
+        title:"Your Account"
+    },
+    {
+        id:3001,
+        name: "Profile",
+        link: "/"
+    },
+    {
+        id:3002,
+        name: "Orders",
+        link: "/"
+    },
+    {
+        id:3003,
+        name: "Addresses",
+        link: "/"
+    },
+    {
+        id:3004,
+        name: "Account Details",
+        link: "/"
+    },
+    {
+        id:3005,
+        name: "Payment Options",
+        link: "/"
+    },
+]
+
+
+// sidebar Data 
+
+export const Category = [
+    {id: 5001, name: "Life (40)",},
+    {id: 5002, name: "Running (5)",},
+    {id: 5003, name: "Baseball (0)",},
+    {id: 5004, name: "Football (5)",},
+    {id: 5005, name: "Training and Game (5)",},
+    {id: 5006, name: "Cricket (5)",},
+]
+
+// Sidebar Brands Data
+export const BrandsData = [
+    {id: 6001, name: "Nike(40)",},
+    {id: 6002, name: "Adidas (5)",},
+    {id: 6003, name: "Baseball (0)",},
+    {id: 6004, name: "Gucci (5)",},
+    {id: 6005, name: "Dior(5)",},
+    {id: 6006, name: "B&G (5)",},
+]
+// Sidebar Color Data
+export const ColorsData = [
+    { id: 7001, name: "black" },
+    { id: 7002, name: "white" },
+    { id: 7003, name: "green" },
+    { id: 7004, name: "red" },
+    { id: 7005, name: "blue" },
+    { id: 7006, name: "darkblue" },
+    { id: 7006, name: "slate" },
+    { id: 7008, name: "blue" },
+    { id: 7009, name: "orange" },
+    { id: 7010, name: "pink" },
+    { id: 7011, name: "purple" },
+    { id: 7012, name: "black" },
 ]

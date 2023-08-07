@@ -8,7 +8,7 @@ const Cart = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.users.products);
   const [totalAmt, setTotalAmt] = useState("");
-  console.log(products)
+  // console.log(products)
   const [shippingCharge, setShippingCharge] = useState("");
   useEffect(() => {
     let price = 0;

@@ -20,6 +20,7 @@ const storeSlice = createSlice({
               );
               if (item) {
                 item.quantity += action.payload.quantity;
+                console.log(item.quantity, "Quantity", item)
               } else {
                 state.products.push(action.payload);
               }
@@ -28,7 +29,7 @@ const storeSlice = createSlice({
         },
         increaaseQuantity(state, action){
             const item = state.products.find(
-                (item) => item.id === action.payload.id
+                (item) => item.id === action.payload
               );
               if (item) {
                 item.quantity++;
@@ -36,7 +37,7 @@ const storeSlice = createSlice({
         },
         decreseQuantity(state, action){
             const item = state.products.find(
-                (item) => item.id === action.payload.id
+                (item) => item.id === action.payload
               );
               if (item.quantity === 1) {
                 item.quantity = 1;
@@ -46,11 +47,8 @@ const storeSlice = createSlice({
         },
         deleteItem(state, action){
             console.log("Delete item reducer is called");
-             state.products = state.products.filter((item) => {
-              item.id !== action.payload
-              console.log(item.id + "jkhdfkjdayfki")
-              console.log(action.payload)
-            });
+             state.products = state.products.filter((item) => item.id !== action.payload)
+
           },
         Reset(state){
             state.products = [];

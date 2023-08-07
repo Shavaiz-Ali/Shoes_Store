@@ -2,7 +2,7 @@ import {Link} from "react-router-dom"
 const ShopContent = ({filteredProducts}) => {
  
   return (
-    <div className='lg:w-full sm:w-[90%] w-[95%] bg-green-600 mx-auto '>
+    <div className='lg:w-full sm:w-[90%] w-[95%] mx-auto '>
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-6 my-5 px-7">
       {
         filteredProducts.map((item) => {

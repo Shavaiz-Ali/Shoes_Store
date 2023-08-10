@@ -2,7 +2,7 @@ import { useState } from "react";
 import {Link} from "react-router-dom"
 import { MdEmail } from "react-icons/md";
 import { AiFillLock } from "react-icons/ai";
-const Login = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [Confirmpassword, setConfirmpassword] = useState("");
@@ -34,7 +34,7 @@ const Login = () => {
             Login
           </h1>
           <form onSubmit={handleSubmit}>
-            <div className="flex items-center gap-3 border-b border-black/[0.15] sm:w-[400px] w-full justify-start">
+            <div className="flex items-center gap-3 border-b border-black/[0.15] sm:w-[400px] w-[280px] justify-start">
               <span className="text-purple-600 text-xl mb-3">
                 <MdEmail />
               </span>
@@ -53,7 +53,7 @@ const Login = () => {
               <input
                 className="text-[16px] font-semibold outline-none border-none mb-3 text-black/[0.50]"
                 type="password"
-                placeholder="Create an Password"
+                placeholder="Enter your Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -69,7 +69,7 @@ const Login = () => {
                 value={Confirmpassword}
                 onChange={(e) => setConfirmpassword(e.target.value)}
               />
-            </div>
+            </div> 
             <h1 className="text-[14px] font-semibold text-purple-600 my-2">
               Forgot Password?
             </h1>
@@ -89,4 +89,12 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
+
+
+
+
+
+
+
+   

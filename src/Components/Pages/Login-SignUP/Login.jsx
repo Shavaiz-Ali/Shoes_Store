@@ -30,7 +30,7 @@ const Login = () => {
             Login
           </h1>
           <form onSubmit={handleSubmit}>
-            <div className="flex items-center gap-3 border-b border-black/[0.15] sm:w-[400px] w-full justify-start">
+            <div className="flex items-center gap-3 border-b border-black/[0.15] sm:w-[400px] w-[280px] justify-start">
               <span className="text-purple-600 text-xl mb-3">
                 <MdEmail />
               </span>

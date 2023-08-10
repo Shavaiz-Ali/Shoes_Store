@@ -9,13 +9,9 @@ import ProductDetails from "./Components/Pages/productDetails/ProductDetails"
 import Cart from "./Components/Pages/Cart/Cart"
 import Footer from "./Components/Home/Footer/Footer"
 import Shop from "./Components/Pages/Shop/Shop"
-// import 'aos/dist/aos.css'; // Import AOS styles
-// import AOS from 'aos'; // Import AOS library
-import { useEffect } from "react"
+import Login from "./Components/Pages/Login-SignUP/Login"
+import SignUp from "./Components/Pages/Login-SignUP/SignUp"
 function App() {
-// useEffect(() => {
-//  AOS.init(); // Initialize AOS
-// })
   return (
     <>
       <Router> 
@@ -27,9 +23,12 @@ function App() {
           <Route exact path="/" element={<Home />}/>
           <Route exact path="/shop" element={<Shop/>}/>
           {/* Nav Links Routing ends Here  */}
-
           <Route exact path="/product/:id" element={<ProductDetails />}/>
           <Route exact path="/cart" element={<Cart />}/>
+
+          {/* routing for sign up and signin form */}
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/signup" element={<SignUp />} />
         </Routes>
         <Footer />
       </Router>

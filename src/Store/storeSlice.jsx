@@ -1,14 +1,10 @@
-import {createSlice} from "@reduxjs/toolkit";
 
-const getCartFromLocalStorage = () => {
-  const cart = localStorage.getItem("cart");
-  return cart ? JSON.parse(cart) : [];
-};
-const saveCartToLocalStorage = (cart) => {
-  localStorage.setItem("cart", JSON.stringify(cart));
-};
+import { createSlice } from "@reduxjs/toolkit";
+
 const initialState = {
-    products: getCartFromLocalStorage(),
+    products: [],
+    isLoading:false,
+    error: null,
 }
 const storeSlice = createSlice({
     name: "users",
@@ -24,8 +20,6 @@ const storeSlice = createSlice({
               } else {
                 state.products.push(action.payload);
               }
-              console.log(action.payload)
-              saveCartToLocalStorage(state.products);
         },
         increaaseQuantity(state, action){
             const item = state.products.find(
@@ -52,8 +46,7 @@ const storeSlice = createSlice({
           },
         Reset(state){
             state.products = [];
-            saveCartToLocalStorage(state.products);
-        }
+        },
     },
 });
 export const {addToCart, increaaseQuantity, decreseQuantity, Reset, deleteItem} = storeSlice.actions

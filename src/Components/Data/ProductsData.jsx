@@ -15,22 +15,6 @@ export const ProductsData = [
     ],
     quantity: 5,
   },
-//   {
-//     id: 2,
-//     brand: "Nike",
-//     title: "Nike Blazer Mid '77",
-//     price: 100,
-//     rating: 4.3,
-//     image:
-//       "https://static.nike.com/a/images/t_PDP_144_v1/f_auto/5804adcd-94a4-41f6-b29b-509a07e86d47/blazer-low-77-womens-shoes-01lVDq.png",
-//     images: [
-//       "https://static.nike.com/a/images/t_default/b73ec27b-5424-4ee7-92f8-43de4502279a/blazer-low-77-womens-shoes-01lVDq.png",
-//       "https://static.nike.com/a/images/t_default/f440b78b-f4ef-4760-b226-43807a38234a/blazer-low-77-womens-shoes-01lVDq.png",
-//       "https://static.nike.com/a/images/t_default/8198d374-3859-4911-8c7b-ec9425b365e2/blazer-low-77-womens-shoes-01lVDq.png",
-//       "https://static.nike.com/a/images/t_default/c2f3587e-74eb-4f6f-87dc-0626f8f45e98/blazer-low-77-womens-shoes-01lVDq.png",
-//     ],
-//     quantity: 5,
-//   },
   {
     id: 3,
     brand: "Nike",

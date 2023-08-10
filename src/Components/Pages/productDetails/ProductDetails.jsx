@@ -2,10 +2,11 @@ import {useState, useEffect} from "react"
 import { useLocation } from "react-router-dom";
 import ProductDetailsRight from "./productdetailright/ProductDetailsRight";
 import { SideData } from "../../../Constants/Constants";
+// import { useSelector } from "react-redux";
 const ProductDetails = () => {
     const [productInfo, setProductInfo] = useState([]);
     const location = useLocation();
-    
+    // const products = useSelector((state) => state.users.products);
       useEffect(() => {
         if (location.state?.item) {
           setProductInfo(location.state.item);

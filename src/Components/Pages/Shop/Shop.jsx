@@ -5,7 +5,6 @@ import { useState } from "react";
 const Shop = () => {
   const [categorizedItem, setCategorizedItem] = useState("Life");
   const filteredProductsItems = categorizedItem === "Life" ? ProductData : ProductData.filter(item => item.category === categorizedItem);
-  console.log( ProductData.filter(item => item.category ) + categorizedItem )
   return (
     <div className="mx-auto lg:flex " >
         <SideBar setCategorizedItem={setCategorizedItem}/>

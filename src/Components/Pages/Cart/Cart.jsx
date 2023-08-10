@@ -56,7 +56,7 @@ const Cart = () => {
 
           <div className="flex justify-between items-center border border-black/[0.15] py-4 sm:px-8 px-1">
             <div className="flex  items-center sm:gap-4 gap-1">
-              <input type="text" placeholder="Coupon Number" className="sm:w-[200px] w-[100px] px-2 h-[40px] text-[14px] border border-black/[0.15]"/>
+              <input type="text" placeholder="Coupon Number" className="sm:w-[200px] w-[100px] px-2 h-[40px] text-[14px] border border-black/[0.15] outline-none"/>
               <h1 className="sm:text-[18px] text-[13px] sm:font-[600] font-[300]">Apply Coupon</h1>
             </div>
               <h1 className="sm:text-[18px] text-[13px] sm:font-[600] font-[300]">Update Cart</h1>

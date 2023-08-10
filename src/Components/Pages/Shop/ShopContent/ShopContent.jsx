@@ -8,7 +8,7 @@ const ShopContent = ({filteredProducts}) => {
         filteredProducts.map((item) => {
           return(
             <div key={item.id} className="relative" data-aos="fade-up">
-              <Link to={`/product`}>
+              <Link to={`/product/:id`}>
                 <img src={item.image} alt="" className="hover:scale-[1.03] transition-all ease-in duration-300" />
               </Link>
               <div className="flex justify-between items-center z-50">

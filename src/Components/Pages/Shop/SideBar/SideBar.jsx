@@ -5,10 +5,10 @@ import {AiOutlineSearch} from "react-icons/ai";
 import PriceFilter from "./Range";
 
 const SideBar = ({setCategorizedItem}) => {
- const [sidebar, setSidebar] = useState(true)
+ const [sidebar, setSidebar] = useState(true);
 useEffect(() => {
   if(window.innerWidth <= 980) {
-   setSidebar(false)
+   setSidebar(!sidebar)
   }
 }, [])
 
@@ -31,7 +31,7 @@ useEffect(() => {
       {
         sidebar && (
           // select Categories 
-          <div className={`lg:flex flex-col ${sidebar ? "block" : "hidden"} items-start gap-8 py-4 lg:static absolute top-0 left-0 lg:w-auto sm:w-[300px] lg:px-0 px-5 bg-white z-50`} data-aos="fade-right">
+          <div className={`lg:flex flex-col items-start gap-8 py-4 lg:static absolute top-0 left-0 lg:w-auto sm:w-[300px] lg:px-0 px-5 bg-white z-50`} data-aos="fade-right">
             <div className="flex flex-col gap-2">
               <h1 className="text-[24px] font-[600]">Catogory</h1>
               { 
@@ -48,7 +48,7 @@ useEffect(() => {
               } 
             </div>    
             {/* Select Price  */}
-            <PriceFilter /> 
+            <PriceFilter/> 
             {/* Select Brands  */}
             <div className="flex flex-col gap-2 ">
               <h1 className="text-[24px] font-[600]">Brands</h1>

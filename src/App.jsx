@@ -11,10 +11,12 @@ import Footer from "./Components/Home/Footer/Footer"
 import Shop from "./Components/Pages/Shop/Shop"
 import Login from "./Components/Pages/Login-SignUP/Login"
 import SignUp from "./Components/Pages/Login-SignUP/SignUp"
+import ScrollToTopButton from "./Components/Home/ScrollToTop/ScrolltoTop"
 function App() {
   return (
     <>
       <Router> 
+        <ScrollToTopButton />
         <Header />
         <Navbar />
         <TextSlider />

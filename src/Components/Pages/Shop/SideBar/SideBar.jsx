@@ -31,7 +31,7 @@ useEffect(() => {
       {
         sidebar && (
           // select Categories 
-          <div className={`lg:flex flex-col items-start gap-8 py-4 lg:static absolute top-0 left-0 lg:w-auto sm:w-[300px] lg:px-0 px-5 bg-white z-50`} data-aos="fade-right">
+          <div className={`lg:flex flex-col items-start gap-8 py-4 lg:static absolute top-0 left-0 lg:w-auto sm:w-[300px] lg:px-0 px-5 bg-white lg:z-0 z-50`} data-aos="fade-right">
             <div className="flex flex-col gap-2">
               <h1 className="text-[24px] font-[600]">Catogory</h1>
               { 

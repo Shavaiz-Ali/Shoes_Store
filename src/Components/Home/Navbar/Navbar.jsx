@@ -12,7 +12,8 @@ const Navbar = () => {
     const [showMenu, setshowMenu] = useState(true);
     const [mobileNav, setMobilenav] = useState(false);
     const [searchBox, setSearchBox] = useState(true);
-    // const [dropdown, setDropdown] = useState(false);
+    const [mobSearchbox, setMobSearchbox] = useState(false);
+    const [stickyMenu, setStickyMenu] = useState(false)
     useEffect(() =>{
         let responsiveNavbar = () =>{
             if(window.innerWidth <= 980){
@@ -24,10 +25,26 @@ const Navbar = () => {
             }
         }
         responsiveNavbar();
-        window.addEventListener("resize", responsiveNavbar)
+        window.addEventListener("resize", responsiveNavbar);
     })
+    const handleScroll = () => {
+        if (window.scrollY > 200) {
+          setStickyMenu(true);
+        } else {
+          setStickyMenu(false);
+        }
+      };
+    
+      useEffect(() => {
+        // Attach scroll event listener
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+          // Detach scroll event listener when component unmounts
+          window.removeEventListener("scroll", handleScroll);
+        };
+      }, []);
   return (
-        <nav className="w-full h-20 bg-white flex justify-between items-center">
+        <nav className={`w-full h-20 bg-white flex justify-between items-center ${stickyMenu ? "lg:sticky top-0 bg-white z-50 transition-all duration-300 ease-in border-b border-black/[0.25]" : ""}`}>
         {/* navbar Pc  */}
          <div className="logo sm:ml-[20px] ml-[5px]">
             <img className="sm:w-[140px] w-[90px]" src="http://nouthemes.net/html/trueshoes/images/logo.png" alt="Logo" />
@@ -54,9 +71,18 @@ const Navbar = () => {
                 <input className="w-[200px] h-[40px] rounded-[50px] text-[12px] text-slate-400 bg-gray-200 border-0 outline-none px-6" type="text" placeholder="Search Products"/> : 
                 
                 <div className="bg-black sm:h-[50px] h-[40px] sm:w-[50px] w-[40px] text-white rounded-full flex justify-center items-center cursor-pointer">           
-                        <AiOutlineSearch  className="text-[24px] font-semibold cursor-pointer"/>
+                        <AiOutlineSearch  className="text-[24px] font-semibold cursor-pointer" onClick={() => setMobSearchbox(true)}/>
                 </div>
 
+               }
+               {
+                mobSearchbox && (
+                    <div className={`fixed left-0 ${mobSearchbox ? "bottom-0" : "bottom-[-600px]"}  z-50 w-[100vw] bg-black/[0.75] h-[100vh] flex justify-center items-center transition-all duration-500 ease-in lg:hidden`}>
+                        <AiOutlineSearch  className="text-[30px] font-semibold cursor-pointer bg-white h-[50px] pl-2 rounded-tl rounded-bl"/>
+                        <input type="text" placeholder="Search here" className="h-[50px] sm:w-[50%] w-[85%] outline-none border-0 px-4 rounded-tr rounded-br"/>
+                        <MdClose className=" absolute text-[30px] font-semibold cursor-pointer top-[20px] right-[30px] text-white" onClick={() => setMobSearchbox(false)}/>
+                     </div>
+                )
                }
                 <Link to={"/cart"}>
                     <div className="relative bg-black sm:h-[50px] h-[40px] sm:w-[50px] w-[40px] text-white rounded-full flex justify-center items-center cursor-pointer">           

@@ -2,10 +2,11 @@ import { useState } from "react";
 import {Link} from "react-router-dom"
 import { MdEmail } from "react-icons/md";
 import { AiFillLock } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate()
   let regx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
   const handleSubmit = (e) => {
@@ -18,7 +19,7 @@ const Login = () => {
     } else if (password.length < 6 || password === "") {
       alert("Invalid Password");
     } else {
-      alert("Login successful");
+      navigate('/')
     }
   };
 

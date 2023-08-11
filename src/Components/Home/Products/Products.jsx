@@ -26,7 +26,7 @@ const Products = () => {
           {filteredProducts.map((item) => (
             <div key={item.id} className="relative " data-aos="fade-up">
               <Link className="aspect-w-2 aspect-h-2 overflow-hidden" to={`/product/${item.id}`} onClick={() => handleproductdetails(item)}>
-                <img src={item.image} alt="" className="hover:scale-[1.03] transition-all ease-in duration-300 w-[400px] h-[250px]" />
+                <img src={item.image} alt="" className="hover:scale-[1.03] transition-all ease-in duration-300" />
               </Link>
               <div className="flex justify-between items- z-50 gap-4">
                 <h2 className="flex flex-col text-[14px] font-semibold">

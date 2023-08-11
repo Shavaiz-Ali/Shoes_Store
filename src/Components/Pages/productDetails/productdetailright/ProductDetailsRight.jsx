@@ -59,7 +59,7 @@ const ProductDetailsRight = () => {
         )}>Add to cart <FaAngleRight className="text-xl text-white"
         /> </button>
         </div>
-        <div className="flex justify-center items-center bg-black/[0.50] sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] py-3 rounded-full cursor-pointer hover:bg-[#2AC37D] transition-all duration-300 ease-in">
+        <div className="flex justify-center items-center bg-black/[0.50] hover:bg-red-600 sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] py-3 rounded-full cursor-pointer  transition-all duration-300 ease-in">
           <AiOutlineHeart className="sm:text-[20px] text-[16px] text-white"/>
         </div>
         <div className="flex justify-center items-center bg-black/[0.50] sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] py-3 rounded-full cursor-pointer hover:bg-[#2AC37D] transition-all duration-300 ease-in">

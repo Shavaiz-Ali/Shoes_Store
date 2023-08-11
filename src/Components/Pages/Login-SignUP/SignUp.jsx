@@ -1,12 +1,12 @@
 import { useState } from "react";
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import { MdEmail } from "react-icons/md";
 import { AiFillLock } from "react-icons/ai";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [Confirmpassword, setConfirmpassword] = useState("");
-
+  const navigate = useNavigate()
   let regx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
   const handleSubmit = (e) => {
@@ -22,7 +22,7 @@ const SignUp = () => {
         alert("password did't Match")
     }
     else {
-      alert("Login successful");
+      navigate('/')
     }
   };
 
@@ -31,7 +31,7 @@ const SignUp = () => {
       <div className="absolute flex justify-center items-center gap-0">
         <div className="flex justify-start flex-col items-start bg-white  border-0 rounded-[5px] sm:w-[450px] w-full sm:h-[450px] sm:py-5 py-6  sm:px-6 px-4">
           <h1 className="text-[24px] font-semibold  border-b-2 w-[24px] border-purple-600 mb-6">
-            Login
+            SignUp
           </h1>
           <form onSubmit={handleSubmit}>
             <div className="flex items-center gap-3 border-b border-black/[0.15] sm:w-[400px] w-[280px] justify-start">
@@ -77,7 +77,7 @@ const SignUp = () => {
               type="submit"
               className="flex justify-center items-center h-[50px] sm:w-[400px] w-[100%] bg-purple-600 text-white font-semibold text-[16px] rounded mt-6"
             >
-              Log In
+            Sign up
             </button>
           </form>
           <h1 className="sm:text-16px text-[14px] font-semibold  mt-6 flex gap-1 mx-auto">

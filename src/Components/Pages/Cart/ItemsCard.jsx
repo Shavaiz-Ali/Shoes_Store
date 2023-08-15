@@ -2,8 +2,8 @@ import { ImCross } from "react-icons/im";
 import { useDispatch } from "react-redux";
 import {
   deleteItem,
-  decreseQuantity,
-  increaaseQuantity,
+  decreaseQuantity,
+  increaseQuantity,
 } from "../../../Store/storeSlice";
 const ItemsCard = ({item}) => {
   const dispatch = useDispatch()
@@ -26,13 +26,13 @@ const ItemsCard = ({item}) => {
       <p className="md:hidden text-xl text-black font-[600] col-span-4">Quantity</p>
           <div className="flex items-center mt-1">
             <span className="w-[50px] h-[45px] bg-black text-white sm:text-2xl text-[16px] flex items-center justify-center hover:bg-black/[0.70] cursor-pointer duration-300 border-[1px] border-gray-300 hover:border-gray-300" onClick={() => dispatch(
-              decreseQuantity(item.id)
+              decreaseQuantity(item.id)
             )}>-</span>
 
             <h1 className="w-[110px] h-[45px] text-xl bg-gray-100 flex justify-center items-center">{item.quantity }</h1>
 
             <span className="w-[50px] h-[45px] bg-black text-white sm:text-2xl text-[16px] flex items-center justify-center hover:bg-black/[0.70] cursor-pointer duration-300 border-[1px] border-gray-300 hover:border-gray-300"onClick={() => dispatch(
-              increaaseQuantity(item.id)
+              increaseQuantity(item.id)
             )}>+</span>
           </div>
       </div>

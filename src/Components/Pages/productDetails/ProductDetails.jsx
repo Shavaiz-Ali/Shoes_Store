@@ -12,8 +12,10 @@ const ProductDetails = () => {
           setProductInfo(location.state.item);
         }
       }, [location.state?.item]);
+
+      
   return (
-    <div className='container mx-auto' data-aos="zoom-in">
+    <div className='container mx-auto md:w-[85%] w-[95%]' data-aos="zoom-in">
         {/* product images  */}
         <div className=" flex md:flex-row flex-col justify-center my-[4rem] gap-10">
           <div className="flex lg:flex-row flex-col justify-center gap-5 ">

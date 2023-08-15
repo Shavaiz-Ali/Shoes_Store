@@ -7,6 +7,7 @@ import {AiOutlineSearch} from "react-icons/ai";
 import {MdClose} from "react-icons/md"
 import {Link} from "react-router-dom"
 import { useSelector } from "react-redux";
+
 const Navbar = () => {
   const products = useSelector((state) => state.users.products);
     const [showMenu, setshowMenu] = useState(true);

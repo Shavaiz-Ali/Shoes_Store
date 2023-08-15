@@ -1,6 +1,6 @@
 
 import {useState} from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 const Header = () => {
   const [dropdowm, setDropdown] = useState(false);
 
@@ -19,8 +19,8 @@ const Header = () => {
         <button className=" relative border border-black/[0.15] border-b-0 text-[14px] text-normal text-black/[0.50] h-12 sm:px-4 px-2 py-2 hover:bg-black/[0.05] hover:text-green-600 transtion-all duration-300 ease-in-out"  onMouseEnter={setMouseOnEnter} onMouseLeave={setMouseOnLeave}>LOGIN & REGISTER
 
           <div className={`absolute ${dropdowm ? "top-[60px]" : "top-[-500px]"} left-[-70px] flex flex-col items-center justify-center gap-3 bg-white shadow-xl shadow-black/[0.50] h-[200px] w-[200px] z-50 transition-all duration-700 ease-in-out`}>
-              <Link to={"/login"} className="text-xl text-black bg-black/[0.10] h-[40px] w-[120px] flex items-center justify-center rounded list-none ">Sign In</Link>
-              <Link to={"/signup"} className="text-xl text-black bg-black/[0.10] h-[40px] w-[120px] flex items-center justify-center rounded list-none ">Sign Up</Link>
+              <Link to={"/login"} className="text-[14px] font-semibold text-white bg-purple-600 h-[40px] w-[120px] flex items-center justify-center rounded list-none ">Sign In</Link>
+              <Link to={"/signup"} className="text-[14px] font-semibold text-white bg-purple-600 h-[40px] w-[120px] flex items-center justify-center rounded list-none ">Sign Up</Link>
           </div>
 
         </button>

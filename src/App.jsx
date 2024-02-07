@@ -7,7 +7,7 @@ import Navbar from "./Components/Home/Navbar/Navbar";
 import TextSlider from "./Components/Home/Slider/TextSlider";
 import Home from "./Components/Home/Home";
 import ProductDetails from "./Components/Pages/productDetails/ProductDetails";
-import Cart from "./Components/Pages/Cart/Cart";
+import DisplayProduct from "./Components/Pages/Cart/Cart";
 import Footer from "./Components/Home/Footer/Footer";
 import Shop from "./Components/Pages/Shop/Shop";
 import Login from "./Components/Pages/Login-SignUP/Login";
@@ -34,7 +34,7 @@ function App() {
           <Route exact path="/shop" element={<Shop />} />
           {/* Nav Links Routing ends Here  */}
           <Route exact path="/product/:id" element={<ProductDetails />} />
-          <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/cart" element={<DisplayProduct />} />
 
           {/* routing for sign up and signin form */}
           <Route exact path="/login" element={<Login />} />

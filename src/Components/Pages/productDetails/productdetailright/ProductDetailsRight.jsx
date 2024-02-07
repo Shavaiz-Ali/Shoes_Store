@@ -8,8 +8,9 @@ import { useDispatch } from "react-redux";
 import {addToCart} from "../../../../Store/storeSlice"
 const ProductDetailsRight = () => {
   const [productInfo, setProductInfo] = useState([]);
+  // console.log
   const location = useLocation();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
     useEffect(() => {
       if (location.state?.item) {
         setProductInfo(location.state.item);

@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import ItemCard from "./ItemsCard"
 import { Reset } from "../../../Store/storeSlice";
 // import { emptyCart } from "../../assets/images/index";
-const Cart = () => {
+export const Cart = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.users.products);
+  const {products} = useSelector((state) => state.users);
+  console.log(products)
   const [totalAmt, setTotalAmt] = useState("");
   // console.log(products)
   const [shippingCharge, setShippingCharge] = useState("");
+  
   useEffect(() => {
     let price = 0;
     products.map((item) => {
@@ -18,6 +20,7 @@ const Cart = () => {
     });
     setTotalAmt(price);
   }, [products]);
+
   useEffect(() => {
     if (totalAmt <= 200) {
       setShippingCharge(30);
@@ -29,7 +32,7 @@ const Cart = () => {
   }, [totalAmt]);
   return (
     <div className="container mx-auto overflow-hidden" data-aos="zoom-in">
-      { products.length > 0 ? (
+      { products?.length > 0 ? (
         <div>
           <div className="md:grid lg:grid-cols-12 grid-cols-12 place-items-center  bg-black/[0.15] my-5 py-5 rounded hidden ">
             <h1 className="md:text-xl sm:text-[16px] text-[13px] text-black font-[600] col-span-4">Products</h1>
@@ -75,11 +78,13 @@ const Cart = () => {
                     <span>{totalAmt + shippingCharge}</span>
                   </h1>
               </div>
-            <button className="w-[250px] h-[40px] text-white bg-black border-0 outline-none mt-4">Proceed to Checkout</button>
+              <form action="/create-checkout-session" method="post">   
+                <button type="submit" className="w-[250px] h-[40px] text-white bg-black border-0 outline-none mt-4">Proceed to Checkout</button>
+              </form>
           </div>
         </div>
       ) : (
-        <div className=" text-[3rem] text-black font-[700] uppercase flex flex-col justify-center items-center transtion-all duration-700 ease-in-out scale-110 h-[50vh]">
+        <div onClick={() => window.scrollTo(0, 0)} className=" text-[3rem] text-black font-[700] uppercase flex flex-col justify-center items-center transtion-all duration-700 ease-in-out scale-110 h-[50vh]">
           <h1> Cart is Empty</h1>
           <Link to={"/"} className='flex justify-center items-center text-[16px] py-3 text-white bg-[#2AC37D] rounded-[50px] w-[200px] mt-5 shadow-black/[0.15] shadow-lg font-semibold hover:bg-[#30d68b] transition-all duration-300 ease-out'>Continue Shopping</Link>
         </div>
@@ -88,5 +93,35 @@ const Cart = () => {
     </div>
   )
 }
+const Message = ({ message }) => (
+  <section>
+    <p>{message}</p>
+  </section>
+);
 
-export default Cart
+const DisplayProduct = () => {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+
+    if (query.get("success")) {
+      setMessage("Order placed! You will receive an email confirmation.");
+    }
+
+    if (query.get("canceled")) {
+      setMessage(
+        "Order canceled -- continue to shop around and checkout when you're ready."
+      );
+    }
+  }, []);
+
+  return message ? (
+    <Message message={message} />
+  ) : (
+    <Cart />
+  );
+}
+
+export default DisplayProduct

@@ -25,9 +25,8 @@ const storeSlice = createSlice({
             } else {
                 state.products.push(action.payload);
             }
-
             // Update localStorage
-            localStorage.setItem("cart", JSON.stringify(state));
+            localStorage.setItem("cart", JSON.stringify(state.products));
         },
         increaseQuantity(state, action) {
             const item = state.products.find(

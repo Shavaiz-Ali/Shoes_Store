@@ -1,7 +1,7 @@
 // import React from "react";
 import ProductTitle from "./ProductTitle";
 // import {useState} from "react"
-const ProductNavigation = ({ setSelectedBrand, num, activetab }) => {
+const ProductNavigation = ({ setSelectedBrand,selectedBrand, num, activetab }) => {
   // const [activeTab, setActiveTab] = useState(false)
   const handleClick = (item) =>{
     setSelectedBrand(item.name)
@@ -57,7 +57,7 @@ const ProductNavigation = ({ setSelectedBrand, num, activetab }) => {
             onClick={() => handleClick(item)}
           >
             {item.name}
-            {num === item.quantity  && <p className="absolute top-0 right-[-10px] text-[12px]">{num}</p> }
+            {selectedBrand === item.name && <p className="absolute top-0 right-[-10px] text-[12px]">{num}</p> }
           </li>
         ))}
       </ul>

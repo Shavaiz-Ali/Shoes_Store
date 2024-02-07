@@ -4,7 +4,7 @@ import {FaBarsStaggered} from "react-icons/fa6";
 import {AiOutlineSearch} from "react-icons/ai";
 import PriceFilter from "./Range";
 
-const SideBar = ({setCategorizedItem}) => {
+const SideBar = ({setCategorizedItem, setBrandItem}) => {
  const [sidebar, setSidebar] = useState(true);
 useEffect(() => {
   if(window.innerWidth <= 980) {
@@ -57,8 +57,8 @@ useEffect(() => {
                   return(
                     <>
                       <div className="flex  items-center gap-4" key={item.id}>
-                        <input className="w-[20px] h-[20px] bg-transparent mt-4 cuesor-pointer" type="checkbox" name="life" id="life" />
-                        <h1 className="text-[16px] text-gray-600 font-[300] mt-4">{item.name}</h1>
+                        <input className="w-[20px] h-[20px] bg-transparent mt-4 cursor-pointer" type="checkbox" name="life" id="life" />
+                        <h1 className="text-[16px] text-gray-600 font-[300] mt-4 cursor-pointer" onClick={() => setBrandItem(item.name)}>{item.name}</h1>
                       </div>
                     </>
                   )

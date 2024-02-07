@@ -4,27 +4,22 @@ import { ProductData } from "../../../Constants/Constants";
 // import { ProductsData } from "../../Data/ProductsData";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import AllCartProducts from "../../../Store/storeSlice";
-import { useSelector } from "react-redux";
 const Products = () => {
   // const product = useSelector((state) => state.users.allProducts);
-  const dispatch = useDispatch()
   const navigate = useNavigate();
   const [selectedBrand, setSelectedBrand] = useState("All");
   const [activetab, SetActivetab] = useState("All");
 
-  const handleproductdetails = (item) => {
-    if(item?.id){
-      navigate(`/product/${item?.id}`, {
-        state: { item },
-      });
-    }  
-  };
+  // const handleproductdetails = (item) => {
+  //   if(item?.id){
+  //     navigate(`/product/${item?.id}`, {
+  //       state: { item },
+  //     });
+  //   }  
+  // };
 
   const filteredProducts = selectedBrand === "All" ? ProductData : ProductData.filter(item => item.brand === selectedBrand)
-  const Tabnum = activetab === "All" ? filteredProducts.length : filteredProducts.filter(item => item.length === activetab.length)
-
+  const Tabnum = activetab === "All" ? filteredProducts.length : filteredProducts.filter(item => item.brand === activetab && item.length)
 
   // useEffect(() =>{
   //   dispatch(AllCartProducts(ProductData))
@@ -33,13 +28,12 @@ const Products = () => {
 
   return (
     <>
-      <ProductNavigation  setSelectedBrand={setSelectedBrand} num={Tabnum} activetab={SetActivetab}/>
+      <ProductNavigation  setSelectedBrand={setSelectedBrand} selectedBrand={selectedBrand} num={Tabnum} activetab={SetActivetab}/>
       <div className="container mx-auto md:w-[85%] w-[95%]" data-aos="zoom-out-down">
-        <h2 onClick={() => dispatch(AllCartProducts("hello"))}>click me</h2>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-6 my-5">
           {filteredProducts.map((item) => (
-            <div key={item.id} className="relative " data-aos="fade-up">
-              <Link className="aspect-w-2 aspect-h-2 overflow-hidden" to={`/product/${item.id}`} onClick={() => handleproductdetails(item)}>
+            <div onClick={() => window.scrollTo(0, 0)} key={item.id} className="relative " data-aos="fade-up">
+              <Link className="aspect-w-2 aspect-h-2 overflow-hidden" to={`/product/${item.id}`}  state={{item:item}}>
                 <img src={item.image} alt="" className="hover:scale-[1.03] transition-all ease-in duration-300" />
               </Link>
               <div className="flex justify-between items- z-50 gap-4">

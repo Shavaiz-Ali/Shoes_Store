@@ -17,7 +17,7 @@ const ProductDetails = () => {
   return (
     <div className='container mx-auto md:w-[85%] w-[95%]' data-aos="zoom-in">
         {/* product images  */}
-        <div className=" flex md:flex-row flex-col justify-center my-[4rem] gap-10">
+        <div className=" flex md:flex-row flex-col justify-center items-center my-[4rem] gap-10">
           <div className="flex lg:flex-row flex-col justify-center gap-5 ">
             <div className="flex lg:flex-col flex-row sm:gap-5 gap-2">
                 {
